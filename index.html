@@ -33,10 +33,16 @@
       z-index: 100;
     }
 
-    header h1 {
-      color: #ff2e63;
-      font-size: 1.5em;
-      letter-spacing: 2px;
+      header h1 {
+    color: #ff2e63;
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    text-shadow: 
+        0 0 10px #ff2e63,
+        0 0 20px #ff2e63,
+        0 0 40px #ff2e63,
+        0 0 80px #ff0048; /* makin besar makin nyala */
+      }
     }
 
     header nav a {
@@ -76,11 +82,15 @@
     }
 
     .hero-content h2 {
-      font-size: 2.8em;
-      color: #ff2e63;
-      text-shadow: 0 0 10px #ff2e63;
-    }
-
+      .glow-red {
+    color: #ff2e63;
+    text-shadow:
+        0 0 10px #ff2e63,
+        0 0 20px #ff2e63,
+        0 0 40px #ff2e63,
+        0 0 80px #ff0048;
+      }
+   
     .hero-content p {
       margin-top: 15px;
       font-size: 1.1em;
@@ -202,14 +212,13 @@
 
   <!-- HEADER -->
   <header>
-    <h1>Scarlet Witch</h1>
-    
+    <h1 class="glow-red">Scarlet Witch</h1>
   </header>
 
   <!-- HERO -->
   <section class="hero">
     <div class="hero-content">
-      <h2>Wanda Maximoff</h2>
+      <h2 class="glow-red">Wanda Maximoff</h2>
       <p>Sorceress terkuat di Marvel Universe. Pengendali realitas dan pengguna sihir Chaos dari Darkhold.</p>
       <button class="btn" onclick="scrollToAbout()">Jelajahi</button>
     </div>
