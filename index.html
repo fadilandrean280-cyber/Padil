@@ -14,11 +14,13 @@
     }
 
     body {
-      body {
   background: url('952ff398e1b6a46241eb1e6aa20fadfc.jpg') no-repeat center center fixed;
   background-size: cover;
   color: #fff;
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  position: relative;
     }
 
     header {
@@ -33,6 +35,22 @@
       align-items: center;
       padding: 15px;
       z-index: 100;
+      
+      :before
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* ubah 0.6 ke 0.4 kalau mau lebih terang */
+  z-index: -1;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
     }
 
       header h1 {
