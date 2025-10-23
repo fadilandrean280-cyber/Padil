@@ -53,8 +53,43 @@
     }
 
     header nav a:hover {
-      color: #ff2e63;
-    }
+  color: #ff2e63;
+}
+
+/* 🔥 Efek cahaya merah untuk teks (Scarlet Witch) */
+@keyframes pulse-glow {
+  0% {
+    text-shadow:
+      0 0 10px #ff2e63,
+      0 0 20px #ff2e63,
+      0 0 40px #ff2e63,
+      0 0 80px #ff0048;
+  }
+  50% {
+    text-shadow:
+      0 0 20px #ff0048,
+      0 0 40px #ff0048,
+      0 0 60px #ff0048,
+      0 0 100px #ff2e63;
+  }
+  100% {
+    text-shadow:
+      0 0 10px #ff2e63,
+      0 0 20px #ff2e63,
+      0 0 40px #ff2e63,
+      0 0 80px #ff0048;
+  }
+}
+
+.glow-red {
+  color: #ff2e63;
+  text-shadow:
+    0 0 10px #ff2e63,
+    0 0 20px #ff2e63,
+    0 0 40px #ff2e63,
+    0 0 80px #ff0048;
+  animation: pulse-glow 2s infinite alternate;
+}
 
     /* ==== HERO SECTION ==== */
     .hero {
