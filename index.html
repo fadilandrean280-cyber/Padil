@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wanda Maximoff | Scarlet Witch</title>
+  <style>
+    /* ==== RESET & FONT ==== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #1b0000, #000);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px;
+      z-index: 100;
+    }
+
+    header h1 {
+      color: #ff2e63;
+      font-size: 1.5em;
+      letter-spacing: 2px;
+    }
+
+    header nav a {
+      color: #fff;
+      margin-left: 25px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    header nav a:hover {
+      color: #ff2e63;
+    }
+
+    /* ==== HERO SECTION ==== */
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background: url('1bd99a16f10e547ca90b1b33345049f4.jpg') center/cover no-repeat;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+    }
+
+    .hero-content h2 {
+      font-size: 2.8em;
+      color: #ff2e63;
+      text-shadow: 0 0 10px #ff2e63;
+    }
+
+    .hero-content p {
+      margin-top: 15px;
+      font-size: 1.1em;
+      line-height: 1.6;
+      color: #ddd;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 10px 25px;
+      border: 2px solid #ff2e63;
+      color: #ff2e63;
+      background: transparent;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #ff2e63;
+      color: #fff;
+      box-shadow: 0 0 15px #ff2e63;
+    }
+
+    /* ==== ABOUT SECTION ==== */
+    .about {
+      padding: 100px 20px;
+      text-align: center;
+      background: #0f0f0f;
+    }
+
+    .about h2 {
+      font-size: 2em;
+      color: #ff2e63;
+      margin-bottom: 30px;
+    }
+
+    .about p {
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.8;
+      color: #ccc;
+    }
+
+    /* ==== POWER SECTION ==== */
+    .powers {
+      padding: 100px 20px;
+      background: linear-gradient(180deg, #000, #2b0000);
+      text-align: center;
+    }
+
+    .powers h2 {
+      font-size: 2em;
+      color: #ff2e63;
+      margin-bottom: 50px;
+    }
+
+    .power-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 25px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 20px #ff2e63;
+    }
+
+    .card h3 {
+      color: #ff2e63;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #ccc;
+      font-size: 0.95em;
+      line-height: 1.6;
+    }
+
+    /* ==== FOOTER ==== */
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #000;
+      border-top: 1px solid #ff2e63;
+      color: #aaa;
+    }
+
+    footer span {
+      color: #ff2e63;
+    }
+
+    /* ==== SCROLL EFFECT ==== */
+    .hidden {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Scarlet Witch</h1>
+    
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Wanda Maximoff</h2>
+      <p>Sorceress terkuat di Marvel Universe. Pengendali realitas dan pengguna sihir Chaos dari Darkhold.</p>
+      <button class="btn" onclick="scrollToAbout()">Jelajahi</button>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about hidden" id="about">
+    <h2>Tentang Wanda</h2>
+    <p>Wanda Maximoff, dikenal sebagai <strong>Scarlet Witch</strong>, adalah mutan dengan kemampuan mengubah realitas melalui sihir Chaos. 
+      Ia pernah menjadi anggota Avengers, namun juga dikenal karena tragedi besar yang ia ciptakan seperti "House of M". 
+      Dengan kekuatannya, Wanda mampu memanipulasi waktu, ruang, dan bahkan kehidupan itu sendiri.</p>
+  </section>
+
+  <!-- POWERS -->
+  <section class="powers hidden" id="powers">
+    <h2>Kekuatan Utama</h2>
+    <div class="power-grid">
+      <div class="card">
+        <h3>Sihir Chaos</h3>
+        <p>Mampu menghancurkan dan membentuk ulang realitas sesuai kehendaknya.</p>
+      </div>
+      <div class="card">
+        <h3>Telekinesis</h3>
+        <p>Dapat menggerakkan objek atau orang hanya dengan kekuatan pikirannya.</p>
+      </div>
+      <div class="card">
+        <h3>Energi Hex</h3>
+        <p>Menembakkan energi merah yang bisa menghancurkan atau mengontrol benda.</p>
+      </div>
+      <div class="card">
+        <h3>Manipulasi Pikiran</h3>
+        <p>Dapat mempengaruhi pikiran dan menciptakan ilusi yang sangat realistis.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact">
+    <p>© 2025 <span>Wanda Maximoff</span>. Fanpage dibuat untuk keperluan tugas HTML & CSS.</p>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    // Scroll ke bagian "Tentang"
+    function scrollToAbout() {
+      document.getElementById("about").scrollIntoView({ behavior: "smooth" });
+    }
+
+    // Animasi muncul saat di-scroll
+    const hiddenElements = document.querySelectorAll('.hidden');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    });
+
+    hiddenElements.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
